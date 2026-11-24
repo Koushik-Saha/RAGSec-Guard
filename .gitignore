@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.parquet
+training-output/
+checkpoints/
+.DS_Store
