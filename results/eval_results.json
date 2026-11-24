@@ -1,0 +1,29 @@
+{
+  "base": {
+    "accuracy": 0.5366,
+    "per_class": {
+      "safe": {"precision": 0.524, "recall": 0.939, "f1": 0.672},
+      "injection": {"precision": 0.333, "recall": 0.015, "f1": 0.029},
+      "jailbreak": {"precision": 0.575, "recall": 0.69, "f1": 0.627}
+    },
+    "false_positive_rate_on_safe": 0.0606,
+    "confusion": {}
+  },
+  "tuned": {
+    "accuracy": 0.9235,
+    "per_class": {
+      "safe": {"precision": 0.927, "recall": 0.891, "f1": 0.909},
+      "injection": {"precision": 0.934, "recall": 0.948, "f1": 0.941},
+      "jailbreak": {"precision": 0.905, "recall": 0.933, "f1": 0.919}
+    },
+    "false_positive_rate_on_safe": 0.1091,
+    "confusion": {
+      "injection -> jailbreak": 4, "injection -> injection": 313, "injection -> safe": 13,
+      "safe -> safe": 294, "safe -> injection": 15, "safe -> jailbreak": 21,
+      "jailbreak -> injection": 7, "jailbreak -> jailbreak": 238, "jailbreak -> safe": 10
+    }
+  },
+  "test_rows": 915,
+  "base_model": "unsloth/Qwen2.5-7B-Instruct-bnb-4bit",
+  "note": "base scores from the v2 full run; tuned scores recovered by the eval-only rerun (ragsec-guard-eval notebook, Nov 24, 2026) against the v2 adapter. The v2 run's own printed tuned accuracy was 0.9224; the recovery run measured 0.9235 (one-row difference, same model and test set)."
+}
