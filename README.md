@@ -49,8 +49,9 @@ discussion: [WRITEUP.md](WRITEUP.md).
 
 ## Try it
 
-The LoRA adapter (~160 MB) is distributed via Hugging Face (link pending in
-this README once uploaded). With a GPU:
+The LoRA adapter (~160 MB) is published on Hugging Face:
+[koushik666/ragsec-guard-qwen2.5-7b-lora](https://huggingface.co/koushik666/ragsec-guard-qwen2.5-7b-lora).
+With a GPU:
 
 ```bash
 pip install unsloth trl peft accelerate bitsandbytes
